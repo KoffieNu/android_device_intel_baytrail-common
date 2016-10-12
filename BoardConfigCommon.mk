@@ -142,3 +142,6 @@ BUILD_EMULATOR := false
 # WiFi
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
+
+# SELinux Policy : baytrail
+-include device/intel/board/platform/baytrail/sepolicy.mk
