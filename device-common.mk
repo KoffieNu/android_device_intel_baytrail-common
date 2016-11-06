@@ -138,3 +138,6 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# Use the non-open-source parts, if they're present
+$(call inherit-product-if-exists, vendor/intel/baytrail-common/baytrail-common-vendor.mk)

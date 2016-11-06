@@ -145,3 +145,6 @@ WPA_SUPPLICANT_VERSION      := VER_0_8_X
 
 # SELinux Policy : baytrail
 -include device/intel/board/platform/baytrail/sepolicy.mk
+
+# Use the non-open-source parts, if they're present :
+-include vendor/intel/baytrail-common/BoardConfigVendor.mk
