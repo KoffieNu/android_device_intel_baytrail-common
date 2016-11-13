@@ -79,18 +79,11 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Hardware Accelerated Graphics
-ENABLE_GEN_GRAPHICS := true
+USE_OPENGL_RENDERER := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
-# Select ufo gen7 libs
-UFO_ENABLE_GEN := gen7
 # Defines Intel library for GPU accelerated Renderscript:
 OVERRIDE_RS_DRIVER := libRSDriver_intel7.so
-USE_OPENGL_RENDERER := true
-USE_INTEL_UFO_DRIVER := true
-USE_INTEL_UFO_OPENCL := true
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-INTEL_VA := true
-BOARD_GRAPHIC_IS_GEN := true
 
 # System's VSYNC phase offsets in nanoseconds
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
@@ -103,24 +96,8 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 BUILD_WITH_FULL_STAGEFRIGHT := true
 INTEL_STAGEFRIGHT := true
 
-# Settings for the Media SDK library and plug-ins:
-# - USE_MEDIASDK: use Media SDK support or not
-USE_MEDIASDK := true
-
-# Settings for MPEG4-ASP:
-# - USE_SW_MPEG4: use software MPEG4 decoder including ASP support
-# - USE_INTEL_IPP: use IPP acceleration in decoders
-# - BOARD_USES_WRS_OMXIL_CORE: load WRS omx-il core
-# - BOARD_USES_MRST_OMX: load omx-component for MPEG4-ASP
-USE_SW_MPEG4 := true
-USE_INTEL_IPP := true
-BOARD_USES_WRS_OMXIL_CORE := true
-BOARD_USES_MRST_OMX := true
-INTEL_VA := true
-
 # Media: DRM Protected Video
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
-USE_INTEL_SECURE_AVC := true
 
 # Security
 BUILD_WITH_CHAABI_SUPPORT := true
